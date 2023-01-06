@@ -10,3 +10,6 @@
     - バグ修正
 
 ## shiguredo
+
+- [CHANGE] TypeScript 化する
+    - @voluntas

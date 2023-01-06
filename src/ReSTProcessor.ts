@@ -1,9 +1,10 @@
-'use strict'
+import type { TextlintPluginOptions } from '@textlint/types'
 
 import { parse } from './rst-to-ast'
 
-export default class ReSTProcessor {
-  constructor(config) {
+export class ReSTProcessor {
+  config: TextlintPluginOptions
+  constructor(config = {}) {
     this.config = config
   }
 
@@ -11,12 +12,12 @@ export default class ReSTProcessor {
     return ['.rst', '.rest']
   }
 
-  processor(ext) {
+  processor(ext: string) {
     return {
-      preProcess(text, filePath) {
+      preProcess(text: string, filePath?: string) {
         return parse(text)
       },
-      postProcess(messages, filePath) {
+      postProcess(messages: any[], filePath?: string) {
         return {
           messages,
           filePath: filePath ? filePath : '<rst>',

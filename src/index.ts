@@ -1,5 +1,5 @@
-"use strict";
+import { ReSTProcessor } from "./ReSTProcessor"
 
 export default {
-    Processor: require("./ReSTProcessor")
+    Processor: ReSTProcessor,
 }
