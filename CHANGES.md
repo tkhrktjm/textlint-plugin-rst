@@ -11,5 +11,11 @@
 
 ## shiguredo
 
+## 2023.1.0
+
+- [ADD] lib 以下も git に含めるようにする
+    - @voluntas
 - [CHANGE] TypeScript 化する
+    - @voluntas
+- [FIX] execSync バッファサイズを大きめにする
     - @voluntas
