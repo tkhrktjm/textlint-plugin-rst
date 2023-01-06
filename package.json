@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "esbuild src/*.ts --outdir=lib",
+    "build": "esbuild --bundle src/*.ts --outdir=lib --platform=node",
     "prepublish": "npm run --if-present build",
     "clean": "rm -frv lib"
   },
