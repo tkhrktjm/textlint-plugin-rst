@@ -18,19 +18,20 @@ Please read https://github.com/shiguredo/oss/blob/master/README.en.md before use
 
 時雨堂がメンテナンスをしています。
 
-## Installation
+## インストール
 
 To install textlint-plugin-rst, the follow python package must be installed.
 
  - [docutils-ast-writer](https://github.com/shiguredo/docutils-ast-writer "docutils-ast-writer")
 
-And run follow command.
+npm には登録しないため、Git 経由でインストールしてください。
+
 
 ```console
 $ npm install git+https://github.com/shiguredo/textlint-plugin-rst#shiguredo
 ```
 
-## Usage
+## 利用方法
 
 - Add `--plugin rst` to command options
 - or add following codes to `.textlintrc`
