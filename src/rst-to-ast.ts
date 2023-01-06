@@ -22,7 +22,7 @@ function filterAndReplaceNodeAttributes(node: TxtNode) {
  * @returns {TxtNode}
  */
 export function parse(text: string): any {
-  let ast = JSON.parse(execSync('rst2ast -q', { input: text }))
+  let ast = JSON.parse(execSync('rst2ast -q', { input: text, maxBuffer: 8192 * 8192 }))
   const src = new StructuredSource(text)
   traverse(ast).forEach(function (node: TxtNode) {
     if (this.notLeaf) {
