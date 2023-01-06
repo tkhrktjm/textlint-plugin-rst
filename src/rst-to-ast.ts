@@ -4,8 +4,9 @@ import { execSync } from 'child_process'
 import traverse from 'traverse'
 import StructuredSource from 'structured-source'
 import { syntaxMap, reSTAttributeKeyMap } from './mapping'
+import type { TxtNode } from "@textlint/ast-node-types";
 
-function filterAndReplaceNodeAttributes(node) {
+function filterAndReplaceNodeAttributes(node: TxtNode) {
   Object.keys(reSTAttributeKeyMap).forEach((key) => {
     let v = node[key]
     node[reSTAttributeKeyMap[key]] = v
@@ -20,10 +21,10 @@ function filterAndReplaceNodeAttributes(node) {
  * @param {string} text
  * @returns {TxtNode}
  */
-export function parse(text) {
+export function parse(text: string): any {
   let ast = JSON.parse(execSync('rst2ast -q', { input: text }))
   const src = new StructuredSource(text)
-  traverse(ast).forEach(function (node) {
+  traverse(ast).forEach(function (node: TxtNode) {
     if (this.notLeaf) {
       filterAndReplaceNodeAttributes(node)
       // type
