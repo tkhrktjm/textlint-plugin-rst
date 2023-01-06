@@ -26,7 +26,9 @@ To install textlint-plugin-rst, the follow python package must be installed.
 
 And run follow command.
 
-    npm install textlint-plugin-rst
+```console
+$ npm install git+https://github.com/shiguredo/textlint-plugin-rst#shiguredo
+```
 
 ## Usage
 
