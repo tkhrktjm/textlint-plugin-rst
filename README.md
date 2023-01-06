@@ -14,7 +14,7 @@ Please read https://github.com/shiguredo/oss/blob/master/README.en.md before use
 
 ## textlint-plugin-rst について
 
-このリポジトリは `@jimo1001 <https://github.com/johejo/>`_ の https://github.com/jimo1001/textlint-plugin-rst フォークです。
+このリポジトリは [@jimo1001](https://github.com/johejo/) の https://github.com/jimo1001/textlint-plugin-rst フォークです。
 
 時雨堂がメンテナンスをしています。
 
