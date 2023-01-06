@@ -1,7 +1,7 @@
 {
   "name": "textlint-plugin-rst",
   "description": "reStructuredText support for textlint",
-  "version": "0.1.1",
+  "version": "2023.1.0",
   "main": "lib/index.js",
   "files": [
     "src",
@@ -15,6 +15,7 @@
   },
   "author": "Yoshinobu Fujimoto",
   "email": "jimo1001@gmail.com",
+  "maintainers": ["Shiguredo Inc."],
   "license": "MIT",
   "keywords": [
     "textlint",
