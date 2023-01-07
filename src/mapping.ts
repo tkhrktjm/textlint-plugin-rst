@@ -15,7 +15,8 @@ export const syntaxMap = {
     "emphasis": "Emphasis",
     "strong": "Strong",
     "image": "Image",
-    "inline": "Code"
+    "inline": "Code",
+    "literal": "Code"
 };
 
 export const reSTAttributeKeyMap = {

@@ -11,6 +11,10 @@
 
 ## shiguredo
 
+- [FIX] syntaxMap に `"literal": "Code"` を追加する
+    - @tk0miya からのアドバイス
+    - @voluntas
+
 ## 2023.1.0
 
 - [ADD] lib 以下も git に含めるようにする
