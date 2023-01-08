@@ -1,5 +1,8 @@
 # textlint-plugin-rst
 
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/shiguredo/textlint-plugin-rst.svg)](https://github.com/shiguredo/textlint-plugin-rst)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 reStructuredText(`*.rst`) support for [textlint](https://github.com/textlint/textlint "textlint").
 
 ## About Shiguredo's open source software
