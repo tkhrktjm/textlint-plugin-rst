@@ -2,7 +2,7 @@
 
 import { execSync } from 'child_process'
 import traverse from 'traverse'
-import StructuredSource from 'structured-source'
+import { StructuredSource } from 'structured-source'
 import { syntaxMap, reSTAttributeKeyMap } from './mapping'
 import type { TxtNode } from "@textlint/ast-node-types";
 

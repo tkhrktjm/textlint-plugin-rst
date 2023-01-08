@@ -11,6 +11,7 @@
 
 ## shiguredo
 
+- [UPDATE] structured-source を 4.0.0 に上げる
 - [FIX] syntaxMap に `"literal": "Code"` を追加する
     - @tk0miya からのアドバイス
     - @voluntas
