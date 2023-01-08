@@ -20,12 +20,11 @@ Please read https://github.com/shiguredo/oss/blob/master/README.en.md before use
 
 ## インストール
 
-To install textlint-plugin-rst, the follow python package must be installed.
+textlint-plugin-rst を利用するには以下の Python ライブラリのインストールが必須となります。
 
  - [docutils-ast-writer](https://github.com/shiguredo/docutils-ast-writer "docutils-ast-writer")
 
 npm には登録しないため、Git 経由でインストールしてください。
-
 
 ```console
 $ npm install git+https://github.com/shiguredo/textlint-plugin-rst#shiguredo
@@ -33,8 +32,14 @@ $ npm install git+https://github.com/shiguredo/textlint-plugin-rst#shiguredo
 
 ## 利用方法
 
-- Add `--plugin rst` to command options
-- or add following codes to `.textlintrc`
+Sphinx で source ディレクトリを利用している場合は以下のように実行することでチェックが走ります。
+
+```console
+$ npx textlint --plugin rst source/*.rst
+```
+
+.textlintrc に以下を登録してください
+
 ```
 {
     "plugins": [
@@ -42,6 +47,15 @@ $ npm install git+https://github.com/shiguredo/textlint-plugin-rst#shiguredo
     ]
 }
 ```
+
+## 既知の問題
+
+**協力者募集中**
+
+- https://github.com/textlint-rule/textlint-rule-prh が正常に動作しない
+    - スペルが間違っていないのに間違っていると言われる
+    - スペルが間違っているのにチェックされない
+    - これは rst の `` リテラルを利用することで正常に動作しないことまではわかっています
 
 ## ライセンス
 
