@@ -1,25 +1,35 @@
 // LICENSE : MIT
 "use strict";
+import { ASTNodeTypes } from "@textlint/ast-node-types";
 
-export const syntaxMap = {
-    "document": "Document",
-    "paragraph": "Paragraph",
-    "block_quote": "BlockQuote",
-    "list_item": "ListItem",
-    "bullet_list": "List",
-    "title": "Header",
-    "literal_block": "CodeBlock",
-    "reference": "Link",
-    "meta": "Html",
-    "text": "Str",
-    "emphasis": "Emphasis",
-    "strong": "Strong",
-    "image": "Image",
-    "inline": "Code",
-    "literal": "Code"
+interface SyntaxMap {
+    [index: string]: ASTNodeTypes
+}
+
+export const syntaxMap: SyntaxMap = {
+    "document": ASTNodeTypes.Document,
+    "paragraph": ASTNodeTypes.Paragraph,
+    "block_quote": ASTNodeTypes.BlockQuote,
+    "list_item": ASTNodeTypes.ListItem,
+    "bullet_list": ASTNodeTypes.List,
+    "title": ASTNodeTypes.Header,
+    "literal_block": ASTNodeTypes.CodeBlock,
+    "reference": ASTNodeTypes.Link,
+    "meta": ASTNodeTypes.Html,
+    "text": ASTNodeTypes.Str,
+    "emphasis": ASTNodeTypes.Emphasis,
+    "strong": ASTNodeTypes.Strong,
+    "image": ASTNodeTypes.Image,
+    "inline": ASTNodeTypes.Code,
+    "literal": ASTNodeTypes.Code,
+    "title-reference": ASTNodeTypes.Header
 };
 
-export const reSTAttributeKeyMap = {
+interface ReSTAttributeKeyMap {
+    [index: string]: string
+}
+
+export const reSTAttributeKeyMap: ReSTAttributeKeyMap = {
     "tagname": "type",
     "rawsource": "raw",
     "text": "value"
