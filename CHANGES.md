@@ -14,6 +14,7 @@
 ## 2023.2.0
 
 - [UPDATE] structured-source を 4.0.0 に上げる
+    - @voluntas
 - [FIX] syntaxMap に `"literal": "Code"` を追加する
     - @tk0miya からのアドバイス
     - @voluntas
