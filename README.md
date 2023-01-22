@@ -55,10 +55,7 @@ $ npx textlint --plugin rst source/*.rst
 
 **協力者募集中**
 
-- https://github.com/textlint-rule/textlint-rule-prh が正常に動作しない
-    - スペルが間違っていないのに間違っているとエラー出力されている
-    - スペルが間違っているのにエラー出力されない
-    - これは rst の \`\`a\`\` のようなリテラルを利用している行で正常に動作しないことまでは把握しています
+- codeblock を正しく解釈できない
 
 ## ライセンス
 
