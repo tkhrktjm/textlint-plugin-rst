@@ -11,10 +11,14 @@
 
 ## shiguredo
 
+## 2023.2.0
+
 - [UPDATE] structured-source を 4.0.0 に上げる
 - [FIX] syntaxMap に `"literal": "Code"` を追加する
     - @tk0miya からのアドバイス
     - @voluntas
+- [FIX] node.loc および node.range の値を正しく設定する
+    - @max747
 
 ## 2023.1.0
 
