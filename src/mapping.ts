@@ -22,7 +22,8 @@ export const syntaxMap: SyntaxMap = {
     "image": ASTNodeTypes.Image,
     "inline": ASTNodeTypes.Code,
     "literal": ASTNodeTypes.Code,
-    "title-reference": ASTNodeTypes.Header
+    "title-reference": ASTNodeTypes.Header,
+    "comment": ASTNodeTypes.Comment,
 };
 
 interface ReSTAttributeKeyMap {
