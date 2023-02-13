@@ -1,0 +1,222 @@
+{
+  "autofootnote_start": 1,
+  "symbol_footnote_start": 0,
+  "children": [
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "コメントのテスト",
+          "value": "コメントのテスト",
+          "range": [
+            0,
+            8
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 8
+            }
+          }
+        }
+      ],
+      "type": "Paragraph",
+      "raw": "コメントのテスト",
+      "range": [
+        0,
+        8
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 8
+        }
+      }
+    },
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "1行コメント",
+          "value": "1行コメント",
+          "range": [
+            13,
+            19
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 3
+            },
+            "end": {
+              "line": 3,
+              "column": 9
+            }
+          }
+        }
+      ],
+      "type": "Comment",
+      "raw": "1行コメント",
+      "range": [
+        13,
+        19
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 3
+        },
+        "end": {
+          "line": 3,
+          "column": 9
+        }
+      }
+    },
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "本文",
+          "value": "本文",
+          "range": [
+            21,
+            23
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "type": "Paragraph",
+      "raw": "本文",
+      "range": [
+        21,
+        23
+      ],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 2
+        }
+      }
+    },
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "複数行\nコメント",
+          "value": "複数行\nコメント",
+          "range": [
+            0,
+            0
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0
+            }
+          }
+        }
+      ],
+      "type": "Comment",
+      "raw": "複数行\nコメント",
+      "range": [
+        0,
+        0
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 0
+        }
+      }
+    },
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "終わり",
+          "value": "終わり",
+          "range": [
+            46,
+            49
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "type": "Paragraph",
+      "raw": "終わり",
+      "range": [
+        46,
+        49
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "type": "Document",
+  "raw": "",
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 12,
+      "column": 0
+    }
+  },
+  "range": [
+    0,
+    50
+  ]
+}
