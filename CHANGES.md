@@ -11,6 +11,11 @@
 
 ## shiguredo
 
+- [ADD] デバッグ出力を設定で切替可能にする
+    - @max747
+- [FIX] Comment ノードが textlint の期待する形式に従うようにする。ただし 1 行コメントのみ
+    - @max747
+
 ## 2023.2.0
 
 - [UPDATE] structured-source を 4.0.0 に上げる
