@@ -276,17 +276,17 @@
               "type": "BlockQuote",
               "raw": "- ネスト1\n- ネスト2\n",
               "range": [
-                0,
-                0
+                32,
+                46
               ],
               "loc": {
                 "start": {
-                  "line": 1,
-                  "column": 0
+                  "line": 8,
+                  "column": 3
                 },
                 "end": {
-                  "line": 1,
-                  "column": 0
+                  "line": 9,
+                  "column": 7
                 }
               }
             }
