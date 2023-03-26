@@ -9,6 +9,7 @@
           "type": "Str",
           "raw": "タイトル",
           "value": "タイトル",
+          "original_type": "text",
           "range": [
             0,
             4
@@ -27,6 +28,7 @@
       ],
       "type": "Header",
       "raw": "タイトル",
+      "original_type": "title",
       "range": [
         0,
         4
@@ -49,6 +51,7 @@
           "type": "Str",
           "raw": "テキスト",
           "value": "テキスト",
+          "original_type": "text",
           "range": [
             15,
             19
@@ -67,6 +70,7 @@
       ],
       "type": "Paragraph",
       "raw": "テキスト",
+      "original_type": "paragraph",
       "range": [
         15,
         19
@@ -95,6 +99,7 @@
                   "type": "Str",
                   "raw": "リスト1",
                   "value": "リスト1",
+                  "original_type": "text",
                   "range": [
                     23,
                     27
@@ -113,6 +118,7 @@
               ],
               "type": "Paragraph",
               "raw": "リスト1",
+              "original_type": "paragraph",
               "range": [
                 23,
                 27
@@ -143,6 +149,7 @@
                               "type": "Str",
                               "raw": "ネスト1",
                               "value": "ネスト1",
+                              "original_type": "text",
                               "range": [
                                 34,
                                 38
@@ -161,6 +168,7 @@
                           ],
                           "type": "Paragraph",
                           "raw": "ネスト1",
+                          "original_type": "paragraph",
                           "range": [
                             34,
                             38
@@ -179,6 +187,7 @@
                       ],
                       "type": "ListItem",
                       "raw": "ネスト1",
+                      "original_type": "list_item",
                       "range": [
                         34,
                         38
@@ -203,6 +212,7 @@
                               "type": "Str",
                               "raw": "ネスト2",
                               "value": "ネスト2",
+                              "original_type": "text",
                               "range": [
                                 44,
                                 48
@@ -221,6 +231,7 @@
                           ],
                           "type": "Paragraph",
                           "raw": "ネスト2",
+                          "original_type": "paragraph",
                           "range": [
                             44,
                             48
@@ -239,6 +250,7 @@
                       ],
                       "type": "ListItem",
                       "raw": "ネスト2\n",
+                      "original_type": "list_item",
                       "range": [
                         44,
                         49
@@ -257,6 +269,7 @@
                   ],
                   "type": "List",
                   "raw": "",
+                  "original_type": "bullet_list",
                   "loc": {
                     "start": {
                       "line": 8,
@@ -275,6 +288,7 @@
               ],
               "type": "BlockQuote",
               "raw": "- ネスト1\n- ネスト2\n",
+              "original_type": "block_quote",
               "range": [
                 32,
                 46
@@ -293,18 +307,19 @@
           ],
           "type": "ListItem",
           "raw": "リスト1\n\n - ネスト1\n - ネスト2\n",
+          "original_type": "list_item",
           "range": [
-            0,
-            0
+            23,
+            45
           ],
           "loc": {
             "start": {
-              "line": 1,
-              "column": 0
+              "line": 6,
+              "column": 2
             },
             "end": {
-              "line": 1,
-              "column": 0
+              "line": 9,
+              "column": 6
             }
           }
         },
@@ -318,6 +333,7 @@
                   "type": "Str",
                   "raw": "リスト2",
                   "value": "リスト2",
+                  "original_type": "text",
                   "range": [
                     52,
                     56
@@ -336,6 +352,7 @@
               ],
               "type": "Paragraph",
               "raw": "リスト2",
+              "original_type": "paragraph",
               "range": [
                 52,
                 56
@@ -354,6 +371,7 @@
           ],
           "type": "ListItem",
           "raw": "リスト2",
+          "original_type": "list_item",
           "range": [
             52,
             56
@@ -379,6 +397,7 @@
                   "type": "Str",
                   "raw": "リスト3",
                   "value": "リスト3",
+                  "original_type": "text",
                   "range": [
                     59,
                     63
@@ -397,6 +416,7 @@
               ],
               "type": "Paragraph",
               "raw": "リスト3",
+              "original_type": "paragraph",
               "range": [
                 59,
                 63
@@ -415,6 +435,7 @@
           ],
           "type": "ListItem",
           "raw": "リスト3",
+          "original_type": "list_item",
           "range": [
             59,
             63
@@ -433,6 +454,7 @@
       ],
       "type": "List",
       "raw": "",
+      "original_type": "bullet_list",
       "loc": {
         "start": {
           "line": 6,
@@ -451,6 +473,7 @@
   ],
   "type": "Document",
   "raw": "",
+  "original_type": "document",
   "loc": {
     "start": {
       "line": 1,
