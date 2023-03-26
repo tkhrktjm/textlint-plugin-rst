@@ -51,12 +51,6 @@ $ npx textlint --plugin rst source/
 }
 ```
 
-## 既知の問題
-
-**協力者募集中**
-
-- codeblock を正しく解釈できない
-
 ## ライセンス
 
 ```
