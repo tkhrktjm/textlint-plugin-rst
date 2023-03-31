@@ -9,6 +9,7 @@
           "type": "Str",
           "raw": "コメントのテスト",
           "value": "コメントのテスト",
+          "original_type": "text",
           "range": [
             0,
             8
@@ -27,6 +28,7 @@
       ],
       "type": "Paragraph",
       "raw": "コメントのテスト",
+      "original_type": "paragraph",
       "range": [
         0,
         8
@@ -47,6 +49,7 @@
       "type": "Comment",
       "raw": "1行コメント",
       "value": "1行コメント",
+      "original_type": "comment",
       "range": [
         13,
         19
@@ -69,6 +72,7 @@
           "type": "Str",
           "raw": "本文\nテキスト",
           "value": "本文\nテキスト",
+          "original_type": "text",
           "range": [
             21,
             28
@@ -87,6 +91,7 @@
       ],
       "type": "Paragraph",
       "raw": "本文\nテキスト",
+      "original_type": "paragraph",
       "range": [
         21,
         28
@@ -107,6 +112,7 @@
       "type": "Comment",
       "raw": "複数行\nコメント",
       "value": "複数行\nコメント",
+      "original_type": "comment",
       "range": [
         37,
         45
@@ -129,6 +135,7 @@
           "type": "Str",
           "raw": "終わり",
           "value": "終わり",
+          "original_type": "text",
           "range": [
             51,
             54
@@ -147,6 +154,7 @@
       ],
       "type": "Paragraph",
       "raw": "終わり",
+      "original_type": "paragraph",
       "range": [
         51,
         54
@@ -165,6 +173,7 @@
   ],
   "type": "Document",
   "raw": "",
+  "original_type": "document",
   "loc": {
     "start": {
       "line": 1,

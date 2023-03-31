@@ -39,9 +39,23 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
   const isDebug = process.env.DEBUG?.startsWith("textlint:rst") ?? options?.debug ?? false;
   const ast = JSON.parse(execSync('rst2ast -q', { input: text, maxBuffer: 8192 * 8192 }).toString())
   const src = new StructuredSource(text)
-  const typesNeedCalibration: Array<ASTNodeTypes | string> = [
-    ASTNodeTypes.Header,
-    ASTNodeTypes.Comment,
+  // NOTE: 設定で動的に増やせるようにすると良い
+  const originalTypesNeedCalibration: Array<string> = [
+    "title",
+    "comment",
+    "literal_block",
+    // Sphinx builtin directives
+    // https://sphinx-users.jp/gettingstarted/directives.html
+    "attention",
+    "caution",
+    "danger",
+    "error",
+    "hint",
+    "important",
+    "note",
+    "tip",
+    "warning",
+    "admonition",
   ]
 
   traverse(ast).forEach(function (node: TxtNode | Array<TxtNode>) {
@@ -54,18 +68,23 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
       if (isDebug) {
         console.log("===== node (raw) ===================")
         console.dir(node, {depth: null})
-        console.log("===== parent node ==================")
-        console.log(parentNode)
+        // NOTE: 必要でない限り parent node の情報は dump しなくて良さそう。情報過多になる
+        // console.log("===== parent node ==================")
+        // console.log(parentNode)
       }
 
       if (parentNode && parentNode.type === ASTNodeTypes.Comment) {
         return
       }
       // type
-      if (node.type === null) {
+      // original をバックアップ
+      // TODO: 手抜きなので、あとで真面目に型定義をやること
+      node.original_type = node.type
+      if (node.original_type === null) {
         node.type = ASTNodeTypes.Str
+      } else {
+        node.type = syntaxMap[node.original_type]
       }
-      node.type = syntaxMap[node.type]
       if (!node.type) {
         node.type = 'Unknown'
       }
@@ -100,10 +119,10 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
           if (node.type === ASTNodeTypes.Header) {
             searchStartPos.line -= 1
 
-          // Comment については、1 行コメントであれば 1 行下にずれる。
-          // 複数行コメントであればコメント終了行の次の行が
-          // node.line.start に設定される。強引に Comment の開始位置を探り当てる。
-          } else if (node.type === ASTNodeTypes.Comment) {
+          // Comment などの directive を用いるブロックについては、1 行記述であれば 1 行下にずれる。
+          // 複数行記述であればブロック終了行の次の行が
+          // node.line.start に設定される。この前提で、強引にブロックの開始位置を探り当てる。
+          } else if (originalTypesNeedCalibration.includes(node.original_type)) {
             const fromIndex = src.positionToIndex(searchStartPos)
             // 逆向きにノード開始位置 .. を探索
             const start = text.lastIndexOf("\n..", fromIndex)
@@ -111,7 +130,7 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
 
           // Header のテキスト要素 Str も同様にずれるので、親ノードが
           // 補正対象なら子ノードも同様に補正する。
-          } else if (parentNode && parentNode.type && typesNeedCalibration.includes(parentNode.type)) {
+          } else if (parentNode && parentNode.type && originalTypesNeedCalibration.includes(parentNode.original_type)) {
             searchStartPos.line -= 1
           }
 
@@ -190,6 +209,8 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
  * この例では単純な text.indexOf(search_str) ではマッチせず、結果は -1 となる。
  * 一方 indexOfMultiLineWithoutLspaces(text, search_str) ではマッチングするときに
  * L5, L6 の行頭スペースを無視することで search_str と一致するため、マッチする。
+ * ただし search_str のほうがスペースで開始していると trimStart() された行文字列とは
+ * マッチしなくなってしまう。そこで search_str についても trimStart() する。
  *
  * @param text 検索対象テキスト
  * @param search_str 検索文字列（複数行）
@@ -201,14 +222,14 @@ export function indexOfMultiLineWithoutLspaces(text: string, search_str: string,
   const start = text.indexOf(search_strings[0], position)
   const scanner = lineScanner(text.substring(start))
   // 開始位置の行を得る
-  // -> 行を trimStart() した結果と比較対象の最初の行が一致
+  // -> 行を trimStart() した結果と比較対象を trimStart() した結果の最初の行が一致
   // -> 次の行に対しても同様のことを繰り返す...
   // -> 全部の search_strings に対してマッチしたらマッチ成功。開始位置を返す。
   //    マッチしない行があった時点で -1 を返す。
   for (let i = 0; i < search_strings.length; i++) {
     const result = scanner.next()
     const line = result.value
-    if (line.trimStart() !== search_strings[i]) {
+    if (line.trimStart() !== search_strings[i].trimStart()) {
       return -1
     }
     // 検索対象テキストの次の行がない && search_str の最後まで到達していない
