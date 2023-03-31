@@ -9,6 +9,7 @@
           "type": "Str",
           "raw": "コメントのテスト",
           "value": "コメントのテスト",
+          "original_type": "text",
           "range": [
             0,
             8
@@ -27,6 +28,7 @@
       ],
       "type": "Paragraph",
       "raw": "コメントのテスト",
+      "original_type": "paragraph",
       "range": [
         0,
         8
@@ -44,29 +46,10 @@
     },
     {
       "source": "<stdin>",
-      "children": [
-        {
-          "type": "Str",
-          "raw": "1行コメント",
-          "value": "1行コメント",
-          "range": [
-            13,
-            19
-          ],
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 3
-            },
-            "end": {
-              "line": 3,
-              "column": 9
-            }
-          }
-        }
-      ],
       "type": "Comment",
       "raw": "1行コメント",
+      "value": "1行コメント",
+      "original_type": "comment",
       "range": [
         13,
         19
@@ -87,11 +70,12 @@
       "children": [
         {
           "type": "Str",
-          "raw": "本文",
-          "value": "本文",
+          "raw": "本文\nテキスト",
+          "value": "本文\nテキスト",
+          "original_type": "text",
           "range": [
             21,
-            23
+            28
           ],
           "loc": {
             "start": {
@@ -99,17 +83,18 @@
               "column": 0
             },
             "end": {
-              "line": 5,
-              "column": 2
+              "line": 6,
+              "column": 4
             }
           }
         }
       ],
       "type": "Paragraph",
-      "raw": "本文",
+      "raw": "本文\nテキスト",
+      "original_type": "paragraph",
       "range": [
         21,
-        23
+        28
       ],
       "loc": {
         "start": {
@@ -117,48 +102,29 @@
           "column": 0
         },
         "end": {
-          "line": 5,
-          "column": 2
+          "line": 6,
+          "column": 4
         }
       }
     },
     {
       "source": "<stdin>",
-      "children": [
-        {
-          "type": "Str",
-          "raw": "複数行\nコメント",
-          "value": "複数行\nコメント",
-          "range": [
-            0,
-            0
-          ],
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 1,
-              "column": 0
-            }
-          }
-        }
-      ],
       "type": "Comment",
       "raw": "複数行\nコメント",
+      "value": "複数行\nコメント",
+      "original_type": "comment",
       "range": [
-        0,
-        0
+        37,
+        45
       ],
       "loc": {
         "start": {
-          "line": 1,
-          "column": 0
+          "line": 9,
+          "column": 4
         },
         "end": {
-          "line": 1,
-          "column": 0
+          "line": 10,
+          "column": 4
         }
       }
     },
@@ -169,17 +135,18 @@
           "type": "Str",
           "raw": "終わり",
           "value": "終わり",
+          "original_type": "text",
           "range": [
-            46,
-            49
+            51,
+            54
           ],
           "loc": {
             "start": {
-              "line": 11,
+              "line": 12,
               "column": 0
             },
             "end": {
-              "line": 11,
+              "line": 12,
               "column": 3
             }
           }
@@ -187,17 +154,18 @@
       ],
       "type": "Paragraph",
       "raw": "終わり",
+      "original_type": "paragraph",
       "range": [
-        46,
-        49
+        51,
+        54
       ],
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 3
         }
       }
@@ -205,18 +173,19 @@
   ],
   "type": "Document",
   "raw": "",
+  "original_type": "document",
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 12,
+      "line": 13,
       "column": 0
     }
   },
   "range": [
     0,
-    50
+    55
   ]
 }

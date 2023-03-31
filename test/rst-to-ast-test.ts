@@ -3,7 +3,7 @@ import assert from "assert";
 import fs from "fs";
 import path from "path";
 import { test } from "@textlint/ast-tester";
-import { parse } from "../src/rst-to-ast";
+import { parse, indexOfMultiLineWithoutLspaces } from "../src/rst-to-ast";
 import type { TxtParentNode } from "@textlint/ast-node-types";
 
 const fixturesDir = path.join(__dirname, "testcases");
@@ -43,4 +43,39 @@ describe("testcase", () => {
                 assert.deepStrictEqual(actual, expectedContent)
             })
         })
+})
+
+describe("indexOfMultiLineWithoutLspaces", () => {
+    const text = `本文
+テキスト
+
+..
+    複数行
+    コメント
+
+.. code-block:: javascript
+
+    {
+        "type": "dog"
+    }
+
+終わり`
+
+    it("found in comment", () => {
+        const search_str = "複数行\nコメント"
+        const actual = indexOfMultiLineWithoutLspaces(text, search_str, 9)
+        assert.equal(actual, 16)
+    })
+
+    it("found in code-block", () => {
+        const search_str = '{\n    "type": "dog"\n}'
+        const actual = indexOfMultiLineWithoutLspaces(text, search_str, 30)
+        assert.equal(actual, 62)
+    })
+
+    it("not found", () => {
+        const search_str = "マッチしない文字列"
+        const actual = indexOfMultiLineWithoutLspaces(text, search_str, 0)
+        assert.equal(actual, -1)
+    })
 })
