@@ -96,6 +96,8 @@ export function parse(text: string, options?: ParseOptions): TxtParentNode {
         if (node.type === ASTNodeTypes.Comment) {
           node.value = node.raw
           delete node.children
+        } else if (node.type === ASTNodeTypes.Code) {
+          node.value = node.raw
         } else {
           delete node.value
         }
