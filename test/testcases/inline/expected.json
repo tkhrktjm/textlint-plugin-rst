@@ -1,0 +1,210 @@
+{
+  "autofootnote_start": 1,
+  "symbol_footnote_start": 0,
+  "children": [
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "inline",
+          "value": "inline",
+          "original_type": "text",
+          "range": [
+            0,
+            6
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 6
+            }
+          }
+        }
+      ],
+      "type": "Header",
+      "raw": "inline",
+      "original_type": "title",
+      "range": [
+        0,
+        6
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 6
+        }
+      }
+    },
+    {
+      "children": [
+        {
+          "type": "Str",
+          "raw": "codesample",
+          "value": "codesample",
+          "original_type": "text",
+          "range": [
+            15,
+            25
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0
+            },
+            "end": {
+              "line": 4,
+              "column": 10
+            }
+          }
+        }
+      ],
+      "type": "Unknown",
+      "raw": "",
+      "original_type": "subtitle",
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 0
+        }
+      },
+      "range": [
+        7,
+        14
+      ]
+    },
+    {
+      "source": "<stdin>",
+      "children": [
+        {
+          "type": "Str",
+          "raw": "これは ",
+          "value": "これは ",
+          "original_type": "text",
+          "range": [
+            38,
+            42
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 4
+            }
+          }
+        },
+        {
+          "children": [
+            {
+              "type": "Str",
+              "raw": "codesample",
+              "value": "codesample",
+              "original_type": "text",
+              "range": [
+                44,
+                54
+              ],
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 6
+                },
+                "end": {
+                  "line": 7,
+                  "column": 16
+                }
+              }
+            }
+          ],
+          "type": "Code",
+          "raw": "``codesample``",
+          "value": "``codesample``",
+          "original_type": "literal",
+          "range": [
+            42,
+            56
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 4
+            },
+            "end": {
+              "line": 7,
+              "column": 18
+            }
+          }
+        },
+        {
+          "type": "Str",
+          "raw": " のテストです",
+          "value": " のテストです",
+          "original_type": "text",
+          "range": [
+            56,
+            63
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 18
+            },
+            "end": {
+              "line": 7,
+              "column": 25
+            }
+          }
+        }
+      ],
+      "type": "Paragraph",
+      "raw": "これは ``codesample`` のテストです",
+      "original_type": "paragraph",
+      "range": [
+        38,
+        63
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 25
+        }
+      }
+    }
+  ],
+  "type": "Document",
+  "raw": "",
+  "original_type": "document",
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 0
+    }
+  },
+  "range": [
+    0,
+    64
+  ]
+}
